@@ -1,1 +1,150 @@
+name: Build Vita3K iOS (ipa + tipa)
 
+# วางไฟล์นี้ที่ .github/workflows/build-ios.yml
+# ซอร์ส: อัปโหลด Vita3K-Plus-master.zip ไว้ที่ root ของ repo  หรือ  ใส่ลิงก์ zip ในช่อง source_url ตอนกด Run workflow
+# พอร์ต iOS: Vita3K-iOS-port.zip ไว้ที่ root ของ repo
+# ถ้า build พัง: อ่านสรุปในหน้า Actions (Summary) หรือเปิดไฟล์ REPORT.md ที่ branch "build-logs"
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: "ลิงก์ซอร์สแบบ zip (เว้นว่างถ้าอัปโหลด Vita3K-Plus-master.zip ไว้ใน repo)"
+        required: false
+        default: ""
+      pin_repo:
+        description: "repo ที่ใช้อ้างอิง commit ของ submodule (owner/repo) เว้นว่าง = nckstwrt/Vita3K-Plus"
+        required: false
+        default: ""
+  push:
+    branches: [main, master]
+    paths: ["*.zip", ".github/workflows/build-ios.yml"]
+
+permissions:
+  contents: write
+
+env:
+  IOS_MIN: "16.4"
+  IOS_DEPS: ${{ github.workspace }}/ios-deps
+  GH_TOKEN: ${{ github.token }}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare
+        run: mkdir -p logs work/src_unz work/port_unz
+
+      - name: Get source + port
+        run: |
+          {
+          set -e
+          echo "--- files in repo root:"; ls -la
+          SRC_URL="${{ github.event.inputs.source_url }}"
+          PORT_ZIP=$(ls -1 *.zip 2>/dev/null | grep -i 'ios-port\|ios_port' | head -1 || true)
+          SRC_ZIP=$(ls -1 *.zip 2>/dev/null | grep -vi 'ios-port\|ios_port' | head -1 || true)
+          [ -n "$PORT_ZIP" ] || { echo "ERROR: Vita3K-iOS-port.zip not found in repo root"; exit 1; }
+          unzip -q "$PORT_ZIP" -d work/port_unz
+          if [ -n "$SRC_URL" ]; then
+            echo "downloading source from $SRC_URL"
+            curl -fL --retry 3 -o work/src.zip "$SRC_URL"
+            SRC_ZIP=work/src.zip
+          fi
+          if [ -z "$SRC_ZIP" ]; then
+            echo "ERROR: no source found. Upload Vita3K-Plus-master.zip to the repo root,"
+            echo "       or run the workflow with 'source_url' = https://github.com/<owner>/<repo>/archive/refs/heads/<branch>.zip"
+            exit 1
+          fi
+          echo "source zip: $SRC_ZIP"
+          unzip -q "$SRC_ZIP" -d work/src_unz
+          GM=$(find work/src_unz -maxdepth 3 -name .gitmodules | head -1)
+          [ -n "$GM" ] || { echo "ERROR: .gitmodules not found - is this the Vita3K source zip?"; find work/src_unz -maxdepth 2 | head; exit 1; }
+          SRC_DIR=$(dirname "$GM")
+          PORT_DIR=$(dirname "$(dirname "$(find work/port_unz -maxdepth 4 -name apply_ios_patches.py | head -1)")")
+          PIN="${{ github.event.inputs.pin_repo }}"
+          if [ -z "$PIN" ] && [[ "$SRC_URL" =~ github\.com/([^/]+/[^/]+)/ ]]; then PIN="${BASH_REMATCH[1]}"; fi
+          echo "SRC_DIR=$GITHUB_WORKSPACE/$SRC_DIR"  >> $GITHUB_ENV
+          echo "PORT_DIR=$GITHUB_WORKSPACE/$PORT_DIR" >> $GITHUB_ENV
+          echo "PIN_REPO=${PIN:-nckstwrt/Vita3K-Plus}" >> $GITHUB_ENV
+          echo "src=$SRC_DIR port=$PORT_DIR pin=${PIN:-nckstwrt/Vita3K-Plus}"
+          } 2>&1 | tee logs/01-get-source.log
+
+      - name: Install tools
+        run: |
+          { brew install cmake ninja pkg-config ldid nasm; xcodebuild -version; cmake --version; } 2>&1 | tee logs/02-tools.log
+
+      - name: Fetch git submodules (zip has none)
+        run: bash "$PORT_DIR/scripts/fetch-submodules.sh" "$SRC_DIR" "$PIN_REPO" 2>&1 | tee logs/03-submodules.log
+
+      - name: Restore deps cache
+        uses: actions/cache/restore@v4
+        with:
+          path: ios-deps
+          key: ios-deps-v3-${{ hashFiles('work/port_unz/**/scripts/deps-ios.sh') }}
+
+      - name: Build iOS deps (Boost, OpenSSL, curl, FFmpeg, MoltenVK)
+        run: bash "$PORT_DIR/scripts/deps-ios.sh" "$SRC_DIR" 2>&1 | tee logs/04-deps.log
+
+      - name: Save deps cache
+        uses: actions/cache/save@v4
+        with:
+          path: ios-deps
+          key: ios-deps-v3-${{ hashFiles('work/port_unz/**/scripts/deps-ios.sh') }}
+
+      - name: Apply iOS port
+        run: python3 "$PORT_DIR/scripts/apply_ios_patches.py" "$SRC_DIR" "$PORT_DIR" 2>&1 | tee logs/05-patch.log
+
+      - name: Configure + build
+        run: bash "$PORT_DIR/scripts/build-ios.sh" "$SRC_DIR" 2>&1 | tee logs/06-build.log
+
+      - name: Package ipa / tipa
+        run: bash "$PORT_DIR/scripts/make-ipa.sh" "$SRC_DIR" "$PORT_DIR" "$GITHUB_WORKSPACE/out" 2>&1 | tee logs/07-package.log
+
+      # ---------- always: report ----------
+      - name: Build report
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          bash "$PORT_DIR/scripts/make-report.sh" REPORT.md || bash work/port_unz/*/scripts/make-report.sh REPORT.md || true
+          # CMake's own logs are the most useful thing when configure fails
+          for f in $(find "$SRC_DIR/build-ios" -maxdepth 3 \( -name 'CMakeError.log' -o -name 'CMakeConfigureLog.yaml' \) 2>/dev/null | head -2); do
+            cp "$f" "logs/cmake-$(basename $f)"; done
+          [ -f REPORT.md ] && head -c 1000000 REPORT.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish report to branch build-logs (readable from phone)
+        if: always()
+        run: |
+          [ -f REPORT.md ] || exit 0
+          rm -rf /tmp/bl && mkdir /tmp/bl && cd /tmp/bl
+          git init -q && git config user.name "github-actions" && git config user.email "actions@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch -q --depth 1 origin build-logs 2>/dev/null && git checkout -q -b build-logs FETCH_HEAD || git checkout -q -b build-logs
+          cp "$GITHUB_WORKSPACE/REPORT.md" REPORT.md
+          mkdir -p logs && for f in "$GITHUB_WORKSPACE"/logs/*; do tail -n 400 "$f" > "logs/$(basename $f).txt"; done
+          git add -A && git commit -q -m "build report run ${GITHUB_RUN_ID}" || true
+          git push -q origin build-logs || echo "push of build-logs failed (non-fatal)"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-logs
+          path: |
+            logs/
+            REPORT.md
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: Vita3K-iOS
+          path: |
+            out/Vita3K.ipa
+            out/Vita3K.tipa
