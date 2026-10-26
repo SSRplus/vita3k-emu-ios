@@ -12,6 +12,11 @@ on:
         description: "ลิงก์ซอร์สแบบ zip (เว้นว่างถ้าอัปโหลด Vita3K-Plus-master.zip ไว้ใน repo)"
         required: false
         default: ""
+      lto:
+        description: "ThinLTO (เร็วขึ้นเล็กน้อยตอนรัน แต่ build ช้าและกิน RAM มากกว่า)"
+        type: boolean
+        required: false
+        default: false
       pin_repo:
         description: "repo ที่ใช้อ้างอิง commit ของ submodule (owner/repo) เว้นว่าง = nckstwrt/Vita3K-Plus"
         required: false
@@ -78,7 +83,7 @@ jobs:
 
       - name: Install tools
         run: |
-          { brew install cmake ninja pkg-config ldid nasm; xcodebuild -version; cmake --version; } 2>&1 | tee logs/02-tools.log
+          { brew install cmake ninja pkg-config ldid nasm ccache; xcodebuild -version; cmake --version; } 2>&1 | tee logs/02-tools.log
 
       - name: Fetch git submodules (zip has none)
         run: bash "$PORT_DIR/scripts/fetch-submodules.sh" "$SRC_DIR" "$PIN_REPO" 2>&1 | tee logs/03-submodules.log
@@ -101,8 +106,26 @@ jobs:
       - name: Apply iOS port
         run: python3 "$PORT_DIR/scripts/apply_ios_patches.py" "$SRC_DIR" "$PORT_DIR" 2>&1 | tee logs/05-patch.log
 
+      - name: Restore ccache
+        uses: actions/cache/restore@v4
+        with:
+          path: ~/Library/Caches/ccache
+          key: ccache-ios-${{ github.run_id }}
+          restore-keys: ccache-ios-
+
       - name: Configure + build
+        env:
+          V3K_LTO: ${{ github.event.inputs.lto == 'true' && '1' || '0' }}
+          CCACHE_MAXSIZE: 2G
+          CCACHE_COMPRESS: "1"
         run: bash "$PORT_DIR/scripts/build-ios.sh" "$SRC_DIR" 2>&1 | tee logs/06-build.log
+
+      - name: Save ccache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ~/Library/Caches/ccache
+          key: ccache-ios-${{ github.run_id }}
 
       - name: Package ipa / tipa
         run: bash "$PORT_DIR/scripts/make-ipa.sh" "$SRC_DIR" "$PORT_DIR" "$GITHUB_WORKSPACE/out" 2>&1 | tee logs/07-package.log
