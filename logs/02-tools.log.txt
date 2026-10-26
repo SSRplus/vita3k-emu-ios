@@ -1,0 +1,34 @@
+[33mWarning:[0m cmake 4.4.3 is already installed and up-to-date.
+To reinstall 4.4.3, run:
+  brew reinstall cmake
+[33mWarning:[0m ninja 1.13.2 is already installed and up-to-date.
+To reinstall 1.13.2, run:
+  brew reinstall ninja
+[33mWarning:[0m pkgconf 3.0.7 is already installed and up-to-date.
+To reinstall 3.0.7, run:
+  brew reinstall pkgconf
+[32m==>[0m [1mDownloading bottle manifests[0m
+✔︎ Bottle Manifest ldid (2.1.5_1)
+✔︎ Bottle Manifest nasm (3.02)
+[34m==>[0m [1mWould install 2 formulae:[0m
+ldid nasm
+[34m==>[0m [1mWould install 1 dependency for ldid:[0m
+libplist
+[32m==>[0m [1mFetching downloads for: [32mldid[39m and [32mnasm[39m[0m
+✔︎ Bottle Manifest libplist (2.7.0)
+✔︎ Bottle libplist (2.7.0)
+✔︎ Bottle nasm (3.02)
+✔︎ Bottle ldid (2.1.5_1)
+[32m==>[0m [1mInstalling ldid dependency: [32mlibplist[39m[0m
+[34m==>[0m [1mPouring libplist--2.7.0.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/libplist/2.7.0: 32 files, 604.1KB
+[32m==>[0m [1mInstalling [32mldid[39m[0m
+[34m==>[0m [1mPouring ldid--2.1.5_1.arm64_sequoia.bottle.1.tar.gz[0m
+🍺  /opt/homebrew/Cellar/ldid/2.1.5_1: 6 files, 270KB
+[34m==>[0m [1mPouring nasm--3.02.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/nasm/3.02: 12 files, 3MB
+Xcode 16.4
+Build version 16F6
+cmake version 4.4.3
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).

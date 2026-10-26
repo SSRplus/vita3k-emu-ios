@@ -1,0 +1,32 @@
++ SRC=/Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master
++ PORT=/Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/port_unz/Vita3K-iOS-port
++ OUT=/Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/out
++ export IOS_DEPS=/Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/ios-deps
++ IOS_DEPS=/Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/ios-deps
++ rm -rf Payload /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/out
++ mkdir -p /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/out
+++ find /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/build-ios -maxdepth 4 -type d -name Vita3K.app
+++ head -1
++ APP=/Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/build-ios/bin/Vita3K.app
++ '[' -z /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/build-ios/bin/Vita3K.app ']'
++ mkdir -p Payload
++ cp -R /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/build-ios/bin/Vita3K.app Payload/Vita3K.app
++ cp /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/port_unz/Vita3K-iOS-port/ios/Info.plist Payload/Vita3K.app/Info.plist
++ '[' -d Payload/Vita3K.app/data ']'
++ '[' -d Payload/Vita3K.app/shaders-builtin ']'
++ '[' -f /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/port_unz/Vita3K-iOS-port/ios/AppIcon.png ']'
++ true
++ '[' -f /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/vita3k/Vita3K.png ']'
++ cp /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/vita3k/Vita3K.png Payload/Vita3K.app/Icon.png
++ mkdir -p Payload/Vita3K.app/Frameworks
++ cp -R /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/ios-deps/Frameworks/MoltenVK.framework Payload/Vita3K.app/Frameworks/
++ ldid -S Payload/Vita3K.app/Frameworks/MoltenVK.framework/MoltenVK
++ ldid -S/Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/port_unz/Vita3K-iOS-port/ios/entitlements.plist Payload/Vita3K.app/Vita3K
++ zip -qry /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/out/Vita3K.ipa Payload
++ cp /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/out/Vita3K.ipa /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/out/Vita3K.tipa
++ ls -la /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/out
+total 62864
+drwxr-xr-x   4 runner  staff       128 Oct 26 13:06 .
+drwxr-xr-x  13 runner  staff       416 Oct 26 13:06 ..
+-rw-r--r--   1 runner  staff  15879883 Oct 26 13:06 Vita3K.ipa
+-rw-r--r--   1 runner  staff  15879883 Oct 26 13:06 Vita3K.tipa

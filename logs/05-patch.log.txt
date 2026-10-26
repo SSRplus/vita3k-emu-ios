@@ -1,0 +1,10 @@
+dynarmic MAP_JIT patched: external/dynarmic/externals/oaknut/include/oaknut/code_block.hpp
+dynarmic MAP_JIT patched: external/dynarmic/externals/xbyak/xbyak/xbyak.h
+dynarmic MAP_JIT patched: external/dynarmic/src/dynarmic/backend/x64/block_of_code.cpp
+capstone arch override removed
+GLES paths enabled for iOS: vita3k/renderer/src/gl/ring_buffer.cpp
+GLES paths enabled for iOS: vita3k/renderer/src/gl/screen_render.cpp
+GLES paths enabled for iOS: vita3k/renderer/src/gl/texture.cpp
+GLES paths enabled for iOS: vita3k/renderer/src/gl/sync_state.cpp
+GLES paths enabled for iOS: vita3k/renderer/src/gl/renderer.cpp
+all iOS patches applied
