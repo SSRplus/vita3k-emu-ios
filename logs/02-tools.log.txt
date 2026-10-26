@@ -10,15 +10,30 @@ To reinstall 3.0.7, run:
 [32m==>[0m [1mDownloading bottle manifests[0m
 ✔︎ Bottle Manifest ldid (2.1.5_1)
 ✔︎ Bottle Manifest nasm (3.02)
-[34m==>[0m [1mWould install 2 formulae:[0m
-ldid nasm
+✔︎ Bottle Manifest ccache (4.14)
+[34m==>[0m [1mWould install 3 formulae:[0m
+ldid nasm ccache
 [34m==>[0m [1mWould install 1 dependency for ldid:[0m
 libplist
-[32m==>[0m [1mFetching downloads for: [32mldid[39m and [32mnasm[39m[0m
+[34m==>[0m [1mWould install 4 dependencies for ccache:[0m
+blake3
+fmt
+hiredis
+xxhash
+[32m==>[0m [1mFetching downloads for: [32mldid[39m, [32mnasm[39m and [32mccache[39m[0m
 ✔︎ Bottle Manifest libplist (2.7.0)
-✔︎ Bottle libplist (2.7.0)
-✔︎ Bottle nasm (3.02)
+✔︎ Bottle Manifest blake3 (1.8.7)
 ✔︎ Bottle ldid (2.1.5_1)
+✔︎ Bottle Manifest fmt (12.2.0)
+✔︎ Bottle Manifest hiredis (1.4.1)
+✔︎ Bottle Manifest xxhash (0.8.3)
+✔︎ Bottle nasm (3.02)
+✔︎ Bottle ccache (4.14)
+✔︎ Bottle libplist (2.7.0)
+✔︎ Bottle blake3 (1.8.7)
+✔︎ Bottle hiredis (1.4.1)
+✔︎ Bottle fmt (12.2.0)
+✔︎ Bottle xxhash (0.8.3)
 [32m==>[0m [1mInstalling ldid dependency: [32mlibplist[39m[0m
 [34m==>[0m [1mPouring libplist--2.7.0.arm64_sequoia.bottle.tar.gz[0m
 🍺  /opt/homebrew/Cellar/libplist/2.7.0: 32 files, 604.1KB
@@ -27,6 +42,34 @@ libplist
 🍺  /opt/homebrew/Cellar/ldid/2.1.5_1: 6 files, 270KB
 [34m==>[0m [1mPouring nasm--3.02.arm64_sequoia.bottle.tar.gz[0m
 🍺  /opt/homebrew/Cellar/nasm/3.02: 12 files, 3MB
+[32m==>[0m [1mInstalling dependencies for ccache:[0m [32mblake3[39m, [32mfmt[39m, [32mhiredis[39m and [32mxxhash[39m[0m
+[32m==>[0m [1mInstalling ccache dependency: [32mblake3[39m[0m
+[34m==>[0m [1mPouring blake3--1.8.7.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/blake3/1.8.7: 13 files, 79.5KB
+[32m==>[0m [1mInstalling ccache dependency: [32mfmt[39m[0m
+[34m==>[0m [1mPouring fmt--12.2.0.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/fmt/12.2.0: 31 files, 1MB
+[32m==>[0m [1mInstalling ccache dependency: [32mhiredis[39m[0m
+[34m==>[0m [1mPouring hiredis--1.4.1.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/hiredis/1.4.1: 53 files, 549.3KB
+[32m==>[0m [1mInstalling ccache dependency: [32mxxhash[39m[0m
+[34m==>[0m [1mPouring xxhash--0.8.3.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/xxhash/0.8.3: 28 files, 537.7KB
+[32m==>[0m [1mInstalling [32mccache[39m[0m
+[34m==>[0m [1mPouring ccache--4.14.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/ccache/4.14: 89 files, 2.2MB
+[32m==>[0m [1mCaveats[0m
+[34m==>[0m [1mccache[0m
+To install symlinks for compilers that will automatically use
+ccache, prepend this directory to your PATH:
+  /opt/homebrew/opt/ccache/libexec
+
+If this is an upgrade and you have previously added the symlinks to
+your PATH, you may need to modify it to the path specified above so
+it points to the current version.
+
+NOTE: ccache can prevent some software from compiling.
+ALSO NOTE: The brew command, by design, will never use ccache.
 Xcode 16.4
 Build version 16F6
 cmake version 4.4.3

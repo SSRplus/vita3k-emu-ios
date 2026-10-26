@@ -1,86 +1,68 @@
 # Vita3K iOS build report
-- run: https://github.com/SSRplus/vita3k-emu-ios/actions/runs/40325823572
+- run: https://github.com/SSRplus/vita3k-emu-ios/actions/runs/40326757784
 - result: **success**
-- date: 2026-10-26 13:06 UTC
+- date: 2026-10-26 13:09 UTC
 
 ## Error lines
 ```
-logs/04-deps.log:1580:ld: warning: -s is obsolete
-logs/04-deps.log:1582:Unicode/ICU support for Boost.Regex?... not found.
-logs/04-deps.log:17704:-- Looking for OPENSSL_IS_BORINGSSL - not found
-logs/04-deps.log:17706:-- Looking for OPENSSL_IS_AWSLC - not found
-logs/04-deps.log:17741:-- Looking for 14 include files sys/filio.h, ..., sys/utime.h - not found
-logs/04-deps.log:17753:-- Looking for 19 include files sys/filio.h, ..., io.h - not found
-logs/04-deps.log:17769:-- Looking for linux/tcp.h - not found
-logs/04-deps.log:17781:-- Looking for 31 include files sys/filio.h, ..., stropts.h - not found
-logs/04-deps.log:17783:-- Looking for 31 include files sys/filio.h, ..., termio.h - not found
-logs/04-deps.log:17837:-- Looking for stricmp - not found
-logs/04-deps.log:17839:-- Looking for strcmpi - not found
-logs/04-deps.log:17841:-- Looking for memrchr - not found
-logs/04-deps.log:17855:-- Looking for closesocket - not found
-logs/04-deps.log:17859:-- Looking for getpass_r - not found
-logs/04-deps.log:17871:-- Looking for gethostbyname_r - not found
-logs/04-deps.log:17893:-- Looking for _fseeki64 - not found
-logs/06-build.log:52:-- Looking for fwrite_unlocked - not found
-logs/06-build.log:77:-- Looking for __GLIBC__ - not found
-logs/06-build.log:101:-- Looking for malloc.h - not found
-logs/06-build.log:187:-- Looking for fopen64 - not found
-logs/06-build.log:191:-- Looking for fseeko64 - not found
-logs/06-build.log:195:-- Looking for _i64toa - not found
-logs/06-build.log:199:-- Looking for itoa - not found
-logs/06-build.log:213:-- Looking for _ltoa - not found
-logs/06-build.log:251:-- Looking for sqr - not found
-logs/06-build.log:339:-- Looking for fdatasync - not found
-logs/06-build.log:347:-- Looking for sigtimedwait - not found
-logs/06-build.log:363:-- Looking for getauxval - not found
-logs/06-build.log:365:-- Looking for elf_aux_info - not found
-logs/06-build.log:369:-- Looking for memfd_create - not found
-logs/06-build.log:371:-- Looking for posix_fallocate - not found
-logs/06-build.log:398:-- Looking for pthread_np.h - not found
-logs/06-build.log:2203:ld: warning: ignoring duplicate libraries: '-lbz2', '-lc++', '-liconv', '-lz', 'external/libminiz.a', 'external/psvpfstools/psvpfsparser/cmake/libpsvpfsparser.a', 'vita3k/app/libapp.a', 'vita3k/audio/libaudio.a', 'vita3k/compat/libcompat.a', 'vita3k/config/libconfig.a', 'vita3k/ctrl/libctrl.a', 'vita3k/display/libdisplay.a', 'vita3k/emuenv/libemuenv.a', 'vita3k/gdbstub/libgdbstub.a', 'vita3k/gxm/libgxm.a', 'vita3k/http/libhttp.a', 'vita3k/ime/libime.a', 'vita3k/io/libio.a', 'vita3k/lang/liblang.a', 'vita3k/mem/libmem.a', 'vita3k/module/libmodule.a', 'vita3k/modules/libmodules.a', 'vita3k/motion/libmotion.a', 'vita3k/net/libnet.a', 'vita3k/overlay/liboverlay.a', 'vita3k/packages/libpackages.a', 'vita3k/patch/libpatch.a', 'vita3k/renderer/librenderer.a', 'vita3k/shader/libshader.a', 'vita3k/touch/libtouch.a', 'vita3k/util/libutil.a'
-logs/06-build.log:2204:ld: warning: reducing alignment of section __DATA,__common from 0x8000 to 0x4000 because it exceeds segment maximum alignment
+logs/06-build.log:57:-- Looking for fwrite_unlocked - not found
+logs/06-build.log:82:-- Looking for __GLIBC__ - not found
+logs/06-build.log:106:-- Looking for malloc.h - not found
+logs/06-build.log:192:-- Looking for fopen64 - not found
+logs/06-build.log:196:-- Looking for fseeko64 - not found
+logs/06-build.log:200:-- Looking for _i64toa - not found
+logs/06-build.log:204:-- Looking for itoa - not found
+logs/06-build.log:218:-- Looking for _ltoa - not found
+logs/06-build.log:256:-- Looking for sqr - not found
+logs/06-build.log:344:-- Looking for fdatasync - not found
+logs/06-build.log:352:-- Looking for sigtimedwait - not found
+logs/06-build.log:368:-- Looking for getauxval - not found
+logs/06-build.log:370:-- Looking for elf_aux_info - not found
+logs/06-build.log:374:-- Looking for memfd_create - not found
+logs/06-build.log:376:-- Looking for posix_fallocate - not found
+logs/06-build.log:403:-- Looking for pthread_np.h - not found
+logs/06-build.log:2207:ld: warning: ignoring duplicate libraries: '-lbz2', '-lc++', '-liconv', '-lz', 'external/libminiz.a', 'external/psvpfstools/psvpfsparser/cmake/libpsvpfsparser.a', 'vita3k/app/libapp.a', 'vita3k/audio/libaudio.a', 'vita3k/compat/libcompat.a', 'vita3k/config/libconfig.a', 'vita3k/ctrl/libctrl.a', 'vita3k/display/libdisplay.a', 'vita3k/emuenv/libemuenv.a', 'vita3k/gdbstub/libgdbstub.a', 'vita3k/gxm/libgxm.a', 'vita3k/http/libhttp.a', 'vita3k/ime/libime.a', 'vita3k/io/libio.a', 'vita3k/lang/liblang.a', 'vita3k/mem/libmem.a', 'vita3k/module/libmodule.a', 'vita3k/modules/libmodules.a', 'vita3k/motion/libmotion.a', 'vita3k/net/libnet.a', 'vita3k/overlay/liboverlay.a', 'vita3k/packages/libpackages.a', 'vita3k/patch/libpatch.a', 'vita3k/renderer/librenderer.a', 'vita3k/shader/libshader.a', 'vita3k/touch/libtouch.a', 'vita3k/util/libutil.a'
+logs/06-build.log:2208:ld: warning: reducing alignment of section __DATA,__common from 0x8000 to 0x4000 because it exceeds segment maximum alignment
 ```
 
 ## 01-get-source.log (last 60 lines)
 ```
 --- files in repo root:
-total 15536
-drwxr-xr-x   9 runner  staff      288 Oct 26 12:52 .
-drwxr-xr-x   3 runner  staff       96 Oct 26 12:52 ..
-drwxr-xr-x  14 runner  staff      448 Oct 26 12:52 .git
-drwxr-xr-x   3 runner  staff       96 Oct 26 12:52 .github
-drwxr-xr-x   3 runner  staff       96 Oct 26 12:52 logs
--rw-r--r--   1 runner  staff       16 Oct 26 12:52 README.md
--rw-r--r--   1 runner  staff    75769 Oct 26 12:52 Vita3K-iOS-port.zip
--rw-r--r--   1 runner  staff  7870306 Oct 26 12:52 Vita3K-Plus-master.zip
-drwxr-xr-x   4 runner  staff      128 Oct 26 12:52 work
+total 15552
+drwxr-xr-x   9 runner  staff      288 Oct 26 12:59 .
+drwxr-xr-x   3 runner  staff       96 Oct 26 12:59 ..
+drwxr-xr-x  14 runner  staff      448 Oct 26 12:59 .git
+drwxr-xr-x   3 runner  staff       96 Oct 26 12:59 .github
+drwxr-xr-x   3 runner  staff       96 Oct 26 12:59 logs
+-rw-r--r--   1 runner  staff       16 Oct 26 12:59 README.md
+-rw-r--r--   1 runner  staff    85791 Oct 26 12:59 Vita3K-iOS-port.zip
+-rw-r--r--   1 runner  staff  7870306 Oct 26 12:59 Vita3K-Plus-master.zip
+drwxr-xr-x   4 runner  staff      128 Oct 26 12:59 work
 source zip: Vita3K-Plus-master.zip
 src=work/src_unz/Vita3K-Plus-master port=work/port_unz/Vita3K-iOS-port pin=nckstwrt/Vita3K-Plus
 ```
 
 ## 02-tools.log (last 60 lines)
 ```
-[33mWarning:[0m cmake 4.4.3 is already installed and up-to-date.
-To reinstall 4.4.3, run:
-  brew reinstall cmake
-[33mWarning:[0m ninja 1.13.2 is already installed and up-to-date.
-To reinstall 1.13.2, run:
-  brew reinstall ninja
-[33mWarning:[0m pkgconf 3.0.7 is already installed and up-to-date.
-To reinstall 3.0.7, run:
-  brew reinstall pkgconf
-[32m==>[0m [1mDownloading bottle manifests[0m
-✔︎ Bottle Manifest ldid (2.1.5_1)
-✔︎ Bottle Manifest nasm (3.02)
-[34m==>[0m [1mWould install 2 formulae:[0m
-ldid nasm
-[34m==>[0m [1mWould install 1 dependency for ldid:[0m
-libplist
-[32m==>[0m [1mFetching downloads for: [32mldid[39m and [32mnasm[39m[0m
+[34m==>[0m [1mWould install 4 dependencies for ccache:[0m
+blake3
+fmt
+hiredis
+xxhash
+[32m==>[0m [1mFetching downloads for: [32mldid[39m, [32mnasm[39m and [32mccache[39m[0m
 ✔︎ Bottle Manifest libplist (2.7.0)
-✔︎ Bottle libplist (2.7.0)
-✔︎ Bottle nasm (3.02)
+✔︎ Bottle Manifest blake3 (1.8.7)
 ✔︎ Bottle ldid (2.1.5_1)
+✔︎ Bottle Manifest fmt (12.2.0)
+✔︎ Bottle Manifest hiredis (1.4.1)
+✔︎ Bottle Manifest xxhash (0.8.3)
+✔︎ Bottle nasm (3.02)
+✔︎ Bottle ccache (4.14)
+✔︎ Bottle libplist (2.7.0)
+✔︎ Bottle blake3 (1.8.7)
+✔︎ Bottle hiredis (1.4.1)
+✔︎ Bottle fmt (12.2.0)
+✔︎ Bottle xxhash (0.8.3)
 [32m==>[0m [1mInstalling ldid dependency: [32mlibplist[39m[0m
 [34m==>[0m [1mPouring libplist--2.7.0.arm64_sequoia.bottle.tar.gz[0m
 🍺  /opt/homebrew/Cellar/libplist/2.7.0: 32 files, 604.1KB
@@ -89,6 +71,34 @@ libplist
 🍺  /opt/homebrew/Cellar/ldid/2.1.5_1: 6 files, 270KB
 [34m==>[0m [1mPouring nasm--3.02.arm64_sequoia.bottle.tar.gz[0m
 🍺  /opt/homebrew/Cellar/nasm/3.02: 12 files, 3MB
+[32m==>[0m [1mInstalling dependencies for ccache:[0m [32mblake3[39m, [32mfmt[39m, [32mhiredis[39m and [32mxxhash[39m[0m
+[32m==>[0m [1mInstalling ccache dependency: [32mblake3[39m[0m
+[34m==>[0m [1mPouring blake3--1.8.7.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/blake3/1.8.7: 13 files, 79.5KB
+[32m==>[0m [1mInstalling ccache dependency: [32mfmt[39m[0m
+[34m==>[0m [1mPouring fmt--12.2.0.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/fmt/12.2.0: 31 files, 1MB
+[32m==>[0m [1mInstalling ccache dependency: [32mhiredis[39m[0m
+[34m==>[0m [1mPouring hiredis--1.4.1.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/hiredis/1.4.1: 53 files, 549.3KB
+[32m==>[0m [1mInstalling ccache dependency: [32mxxhash[39m[0m
+[34m==>[0m [1mPouring xxhash--0.8.3.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/xxhash/0.8.3: 28 files, 537.7KB
+[32m==>[0m [1mInstalling [32mccache[39m[0m
+[34m==>[0m [1mPouring ccache--4.14.arm64_sequoia.bottle.tar.gz[0m
+🍺  /opt/homebrew/Cellar/ccache/4.14: 89 files, 2.2MB
+[32m==>[0m [1mCaveats[0m
+[34m==>[0m [1mccache[0m
+To install symlinks for compilers that will automatically use
+ccache, prepend this directory to your PATH:
+  /opt/homebrew/opt/ccache/libexec
+
+If this is an upgrade and you have previously added the symlinks to
+your PATH, you may need to modify it to the path specified above so
+it points to the current version.
+
+NOTE: ccache can prevent some software from compiling.
+ALSO NOTE: The brew command, by design, will never use ccache.
 Xcode 16.4
 Build version 16F6
 cmake version 4.4.3
@@ -133,22 +143,22 @@ pinned submodules total:       28
 
 ## 04-deps.log (last 60 lines)
 ```
-INSTALL	libavutil/version.h
-INSTALL	libavutil/video_enc_params.h
-INSTALL	libavutil/xtea.h
-INSTALL	libavutil/tea.h
-INSTALL	libavutil/tx.h
-INSTALL	libavutil/film_grain_params.h
-INSTALL	libavutil/video_hint.h
-INSTALL	libavutil/avconfig.h
-INSTALL	libavutil/ffversion.h
-INSTALL	libavutil/libavutil.pc
-+ cp libavcodec/codec_internal.h /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/ios-deps/include/libavcodec/
-+ cp config.h /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/ios-deps/include/config.h
-+ popd
-~/work/vita3k-emu-ios/vita3k-emu-ios/deps-build
-+ head -60
++ '[' -z '' ']'
++ '[' -n /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master ']'
++ '[' -d /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/external/ffmpeg ']'
+++ grep -rhoiE 'ffmpeg[-_ /]*(n|version[ =:]*)?[67]\.[0-9](\.[0-9]+)?' /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/external/ffmpeg
+++ grep -oE '[67]\.[0-9](\.[0-9]+)?'
+++ sort -V
+++ tail -1
++ FF_VER=
++ case "$FF_VER" in
++ FF_VER=6.1.1
++ case "$FF_VER" in
++ echo 'FFmpeg version: 6.1.1'
+FFmpeg version: 6.1.1
++ '[' '!' -f /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/ios-deps/lib/libavcodec.a ']'
 + ls /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/ios-deps /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/ios-deps/lib
++ head -60
 /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/ios-deps:
 bin
 Frameworks
@@ -211,6 +221,7 @@ all iOS patches applied
 
 ## 06-build.log (last 60 lines)
 ```
+  149 | #define HTONLL(x)       (x) = htonll((__uint64_t)x)
       |         ^
 In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/vita3k/app/src/app_init.cpp:41:
 In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/vita3k/net/include/net/state.h:20:
@@ -244,15 +255,15 @@ In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_
   214 | #endif
   215 |         case config::RestartRequiredSetting::HighAccuracy:
 3 warnings generated.
-[989/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/apps_list.cpp.o
 [990/1000] Linking CXX static library vita3k/ctrl/libctrl.a
 [991/1000] Linking CXX static library external/libcppcommon.a
-[992/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/session_controller.cpp.o
+[992/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/user.cpp.o
 [993/1000] Building CXX object vita3k/CMakeFiles/vita3k.dir/__/ios/ios_jit.cpp.o
-[994/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/user.cpp.o
+[994/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/session_controller.cpp.o
 [995/1000] Building CXX object vita3k/CMakeFiles/vita3k.dir/performance.cpp.o
 [996/1000] Linking CXX static library vita3k/app/libapp.a
-[997/1000] Building OBJCXX object vita3k/CMakeFiles/vita3k.dir/__/ios/ios_main.mm.o
+[997/1000] Building CXX object vita3k/CMakeFiles/vita3k.dir/interface.cpp.o
+[998/1000] Building OBJCXX object vita3k/CMakeFiles/vita3k.dir/__/ios/ios_main.mm.o
 In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/ios/ios_main.mm:51:
 In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/vita3k/app/include/app/session_controller.h:21:
 In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/vita3k/renderer/include/renderer/state.h:23:
@@ -267,7 +278,6 @@ In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_
   240 |     #define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_INFO
       |             ^
 1 warning generated.
-[998/1000] Building CXX object vita3k/CMakeFiles/vita3k.dir/interface.cpp.o
 [999/1000] Linking CXX executable bin/Vita3K.app/Vita3K
 ld: warning: ignoring duplicate libraries: '-lbz2', '-lc++', '-liconv', '-lz', 'external/libminiz.a', 'external/psvpfstools/psvpfsparser/cmake/libpsvpfsparser.a', 'vita3k/app/libapp.a', 'vita3k/audio/libaudio.a', 'vita3k/compat/libcompat.a', 'vita3k/config/libconfig.a', 'vita3k/ctrl/libctrl.a', 'vit
 ld: warning: reducing alignment of section __DATA,__common from 0x8000 to 0x4000 because it exceeds segment maximum alignment
@@ -302,9 +312,9 @@ ld: warning: reducing alignment of section __DATA,__common from 0x8000 to 0x4000
 + zip -qry /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/out/Vita3K.ipa Payload
 + cp /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/out/Vita3K.ipa /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/out/Vita3K.tipa
 + ls -la /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/out
-total 62864
-drwxr-xr-x   4 runner  staff       128 Oct 26 13:06 .
-drwxr-xr-x  13 runner  staff       416 Oct 26 13:06 ..
--rw-r--r--   1 runner  staff  15879883 Oct 26 13:06 Vita3K.ipa
--rw-r--r--   1 runner  staff  15879883 Oct 26 13:06 Vita3K.tipa
+total 63704
+drwxr-xr-x   4 runner  staff       128 Oct 26 13:09 .
+drwxr-xr-x  13 runner  staff       416 Oct 26 13:09 ..
+-rw-r--r--   1 runner  staff  15880320 Oct 26 13:09 Vita3K.ipa
+-rw-r--r--   1 runner  staff  15880320 Oct 26 13:09 Vita3K.tipa
 ```

@@ -24,23 +24,23 @@ In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_
 [827/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibc/SceLibc.cpp.o
 [828/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibc/SceLibm.cpp.o
 [829/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibc/SceLibstdcxx.cpp.o
-[830/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibft2/SceFt2.cpp.o
-[831/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibDbg/SceDbg.cpp.o
-[832/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibKernel/SceKernelForVM.cpp.o
-[833/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibJson/SceLibJson.cpp.o
+[830/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibDbg/SceDbg.cpp.o
+[831/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibft2/SceFt2.cpp.o
+[832/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibJson/SceLibJson.cpp.o
+[833/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibKernel/SceKernelForVM.cpp.o
 [834/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibKernel/SceKernelForMono.cpp.o
 [835/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibKernel/SceLibGcc.cpp.o
 [836/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibKernel/SceLibRng.cpp.o
 [837/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibKernel/SceLibSsp.cpp.o
-[838/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibKernel/SceRtabi.cpp.o
-[839/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibKernel/SceLibKernel.cpp.o
+[838/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibKernel/SceLibKernel.cpp.o
+[839/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibKernel/SceRtabi.cpp.o
 [840/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibMono/SceLibMono.cpp.o
-[841/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/taiHEN/taiHEN.cpp.o
-[842/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibMonoBridge/SceLibMonoBridge.cpp.o
+[841/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibMonoBridge/SceLibMonoBridge.cpp.o
+[842/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/taiHEN/taiHEN.cpp.o
 [843/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibMp4Recorder/SceLibMp4Recorder.cpp.o
 [844/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibMtp/SceLibMtp.cpp.o
-[845/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLiveArea/SceLiveAreaUtil.cpp.o
-[846/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibXml/SceLibXml.cpp.o
+[845/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLibXml/SceLibXml.cpp.o
+[846/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLiveArea/SceLiveAreaUtil.cpp.o
 [847/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLocation/SceLibLocation.cpp.o
 [848/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLocationExtension/SceLibLocationExtension.cpp.o
 [849/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceLsdb/SceLsdb.cpp.o
@@ -107,9 +107,9 @@ In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_
   146 | #define NTOHLL(x)       (x) = ntohll((__uint64_t)x)
       |         ^
 2 warnings generated.
-[862/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNgsUser/SceNgs.cpp.o
-[863/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNotificationUtil/SceNotificationUtil.cpp.o
-[864/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNotificationUtil/SceNotificationUtilBgApp.cpp.o
+[862/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNotificationUtil/SceNotificationUtil.cpp.o
+[863/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNotificationUtil/SceNotificationUtilBgApp.cpp.o
+[864/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNgsUser/SceNgs.cpp.o
 [865/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNotificationUtil/SceNotificationUtilProgress.cpp.o
 [866/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpActivity/SceNpActivity.cpp.o
 [867/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpBasic/SceNpBasic.cpp.o
@@ -119,20 +119,20 @@ In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_
 [871/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpDrm/SceNpDrmPackage.cpp.o
 [872/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpDrm/ScePsmDrm.cpp.o
 [873/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpManager/SceNpManager.cpp.o
-[874/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpMessage/SceNpMessage.cpp.o
-[875/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpMatching2/SceNpMatching2.cpp.o
+[874/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpMatching2/SceNpMatching2.cpp.o
+[875/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpMessage/SceNpMessage.cpp.o
 [876/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpParty/SceNpPartyGameUtil.cpp.o
 [877/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpScore/SceNpScore.cpp.o
 [878/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpSignaling/SceNpSignaling.cpp.o
 [879/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpSnsFacebook/SceNpSnsFacebook.cpp.o
-[880/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpTus/SceNpTus.cpp.o
-[881/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpTrophy/SceNpTrophy.cpp.o
+[880/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpTrophy/SceNpTrophy.cpp.o
+[881/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpTus/SceNpTus.cpp.o
 [882/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpUtility/SceNpUtility.cpp.o
-[883/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/ScePaf/ScePafMisc.cpp.o
-[884/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpWebApi/SceNpWebApi.cpp.o
+[883/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceNpWebApi/SceNpWebApi.cpp.o
+[884/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/ScePaf/ScePafMisc.cpp.o
 [885/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/ScePaf/ScePafResource.cpp.o
-[886/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/ScePaf/ScePafWidget.cpp.o
-[887/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/ScePaf/ScePafStdc.cpp.o
+[886/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/ScePaf/ScePafStdc.cpp.o
+[887/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/ScePaf/ScePafWidget.cpp.o
 [888/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/ScePamgr/ScePamgr.cpp.o
 [889/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/ScePerf/ScePerf.cpp.o
 [890/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/ScePgf/ScePgf.cpp.o
@@ -173,39 +173,39 @@ In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_
 [925/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceShutterSound/SceShutterSound.cpp.o
 [926/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSmart/SceSmart.cpp.o
 [927/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSqlite/SceSqlite.cpp.o
-[928/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSsl/SceSsl.cpp.o
-[929/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSsl/SceSslInternal.cpp.o
+[928/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSsl/SceSslInternal.cpp.o
+[929/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSsl/SceSsl.cpp.o
 [930/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceStdio/SceStdio.cpp.o
-[931/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceCpu.cpp.o
-[932/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSulpha/SceSulpha.cpp.o
-[933/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceDebugForDriver.cpp.o
-[934/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceDebugForKernel.cpp.o
-[935/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceCpuForDriver.cpp.o
-[936/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceDipsw.cpp.o
-[937/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceDebugLed.cpp.o
+[931/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSulpha/SceSulpha.cpp.o
+[932/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceCpu.cpp.o
+[933/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceCpuForDriver.cpp.o
+[934/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceDebugForDriver.cpp.o
+[935/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceDebugForKernel.cpp.o
+[936/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceDebugLed.cpp.o
+[937/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceDipsw.cpp.o
 [938/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceDipswForDriver.cpp.o
-[939/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceQafMgrForDriver.cpp.o
-[940/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceProcEventForDriver.cpp.o
+[939/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceProcEventForDriver.cpp.o
+[940/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceQafMgrForDriver.cpp.o
 [941/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceSysclibForDriver.cpp.o
 [942/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceSysmem.cpp.o
 [943/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmem/SceSysmemForDriver.cpp.o
 [944/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSysmodule/SceSysmodule.cpp.o
 [945/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceSystemGesture/SceSystemGesture.cpp.o
-[946/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceTeleportServer/SceTeleportServer.cpp.o
-[947/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceTeleportClient/SceTeleportClient.cpp.o
+[946/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceTeleportClient/SceTeleportClient.cpp.o
+[947/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceTeleportServer/SceTeleportServer.cpp.o
 [948/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceTouch/SceTouch.cpp.o
 [949/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceTriggerUtil/SceTriggerUtil.cpp.o
 [950/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceUdcd/SceUdcd.cpp.o
 [951/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceUlobjDbg/SceUlobjDbg.cpp.o
 [952/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceUlobjMgr/SceUlobjMgr.cpp.o
 [953/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceUlt/SceUlt.cpp.o
-[954/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceUsbPspcm/SceUsbPspcm.cpp.o
-[955/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceUsbd/SceUsbdForUser.cpp.o
+[954/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceUsbd/SceUsbdForUser.cpp.o
+[955/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceUsbPspcm/SceUsbPspcm.cpp.o
 [956/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceUsbSerial/SceUsbSerial.cpp.o
 [957/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceUsbServ/SceUsbServ.cpp.o
 [958/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceUsbstorVStorDriver/SceUsbstorVStor.cpp.o
-[959/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceVideodec/SceVideodecUser.cpp.o
-[960/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceVideoExport/SceVideoExport.cpp.o
+[959/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceVideoExport/SceVideoExport.cpp.o
+[960/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceVideodec/SceVideodecUser.cpp.o
 [961/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceVoice/SceVoice.cpp.o
 [962/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceVoiceQoS/SceVoiceQoS.cpp.o
 [963/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceVshBridge/SceDrmBridge.cpp.o
@@ -213,8 +213,8 @@ In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_
 [965/1000] Linking CXX static library vita3k/motion/libmotion.a
 [966/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceVshBridge/SceVshBridge.cpp.o
 [967/1000] Building CXX object vita3k/modules/CMakeFiles/modules.dir/SceWlanBt/SceWlan.cpp.o
-[968/1000] Building CXX object vita3k/module/CMakeFiles/module.dir/src/write_return_value.cpp.o
-[969/1000] Linking CXX static library vita3k/modules/libmodules.a
+[968/1000] Linking CXX static library vita3k/modules/libmodules.a
+[969/1000] Building CXX object vita3k/module/CMakeFiles/module.dir/src/write_return_value.cpp.o
 [970/1000] Building CXX object vita3k/module/CMakeFiles/module.dir/src/load_module.cpp.o
 [971/1000] Linking CXX static library vita3k/module/libmodule.a
 [972/1000] Building CXX object vita3k/net/CMakeFiles/net.dir/src/net.cpp.o
@@ -321,14 +321,15 @@ In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_
 [978/1000] Linking CXX static library vita3k/net/libnet.a
 [979/1000] Building CXX object vita3k/display/CMakeFiles/display.dir/src/display.cpp.o
 [980/1000] Linking CXX static library vita3k/display/libdisplay.a
-[981/1000] Building CXX object external/CMakeFiles/cppcommon.dir/CppCommon/source/cpu.cpp.o
-[982/1000] Building CXX object vita3k/compat/CMakeFiles/compat.dir/src/compat.cpp.o
-[983/1000] Linking CXX static library vita3k/compat/libcompat.a
+[981/1000] Building CXX object vita3k/compat/CMakeFiles/compat.dir/src/compat.cpp.o
+[982/1000] Linking CXX static library vita3k/compat/libcompat.a
+[983/1000] Building CXX object external/CMakeFiles/cppcommon.dir/CppCommon/source/cpu.cpp.o
 [984/1000] Building CXX object external/CMakeFiles/cppcommon.dir/CppCommon/source/environment.cpp.o
 [985/1000] Building CXX object vita3k/ctrl/CMakeFiles/ctrl.dir/src/ctrl.cpp.o
 [986/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/app.cpp.o
 [987/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/discord.cpp.o
-[988/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/app_init.cpp.o
+[988/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/apps_list.cpp.o
+[989/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/app_init.cpp.o
 In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/vita3k/app/src/app_init.cpp:41:
 In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/vita3k/net/include/net/state.h:20:
 In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/vita3k/net/include/net/epoll.h:3:
@@ -371,15 +372,15 @@ In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_
   214 | #endif
   215 |         case config::RestartRequiredSetting::HighAccuracy:
 3 warnings generated.
-[989/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/apps_list.cpp.o
 [990/1000] Linking CXX static library vita3k/ctrl/libctrl.a
 [991/1000] Linking CXX static library external/libcppcommon.a
-[992/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/session_controller.cpp.o
+[992/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/user.cpp.o
 [993/1000] Building CXX object vita3k/CMakeFiles/vita3k.dir/__/ios/ios_jit.cpp.o
-[994/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/user.cpp.o
+[994/1000] Building CXX object vita3k/app/CMakeFiles/app.dir/src/session_controller.cpp.o
 [995/1000] Building CXX object vita3k/CMakeFiles/vita3k.dir/performance.cpp.o
 [996/1000] Linking CXX static library vita3k/app/libapp.a
-[997/1000] Building OBJCXX object vita3k/CMakeFiles/vita3k.dir/__/ios/ios_main.mm.o
+[997/1000] Building CXX object vita3k/CMakeFiles/vita3k.dir/interface.cpp.o
+[998/1000] Building OBJCXX object vita3k/CMakeFiles/vita3k.dir/__/ios/ios_main.mm.o
 In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/ios/ios_main.mm:51:
 In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/vita3k/app/include/app/session_controller.h:21:
 In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_unz/Vita3K-Plus-master/vita3k/renderer/include/renderer/state.h:23:
@@ -394,7 +395,6 @@ In file included from /Users/runner/work/vita3k-emu-ios/vita3k-emu-ios/work/src_
   240 |     #define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_INFO
       |             ^
 1 warning generated.
-[998/1000] Building CXX object vita3k/CMakeFiles/vita3k.dir/interface.cpp.o
 [999/1000] Linking CXX executable bin/Vita3K.app/Vita3K
 ld: warning: ignoring duplicate libraries: '-lbz2', '-lc++', '-liconv', '-lz', 'external/libminiz.a', 'external/psvpfstools/psvpfsparser/cmake/libpsvpfsparser.a', 'vita3k/app/libapp.a', 'vita3k/audio/libaudio.a', 'vita3k/compat/libcompat.a', 'vita3k/config/libconfig.a', 'vita3k/ctrl/libctrl.a', 'vita3k/display/libdisplay.a', 'vita3k/emuenv/libemuenv.a', 'vita3k/gdbstub/libgdbstub.a', 'vita3k/gxm/libgxm.a', 'vita3k/http/libhttp.a', 'vita3k/ime/libime.a', 'vita3k/io/libio.a', 'vita3k/lang/liblang.a', 'vita3k/mem/libmem.a', 'vita3k/module/libmodule.a', 'vita3k/modules/libmodules.a', 'vita3k/motion/libmotion.a', 'vita3k/net/libnet.a', 'vita3k/overlay/liboverlay.a', 'vita3k/packages/libpackages.a', 'vita3k/patch/libpatch.a', 'vita3k/renderer/librenderer.a', 'vita3k/shader/libshader.a', 'vita3k/touch/libtouch.a', 'vita3k/util/libutil.a'
 ld: warning: reducing alignment of section __DATA,__common from 0x8000 to 0x4000 because it exceeds segment maximum alignment
